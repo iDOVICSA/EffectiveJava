@@ -15,12 +15,12 @@
 * Retrun an instance of a class via a static method 
 * Traditionnaly we use public contructor to do the same job
 
-* ###Advantages :
+* ### Advantages :
 	* static methods have names resulting in ease reading of the code 
 	* overcome the problem of creating multiple constructors with order different signatures by creating multiple static methods with well chosen names  
 	* static methods allows returning an object of any subtype of their return type
 
-* ###Limitations : 
+* ### Limitations : 
 	* classes without constructors cannot be subclassed
 	
 ## Item 2 : Builder
