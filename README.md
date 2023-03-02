@@ -23,9 +23,10 @@
 * ### Limitations : 
 	* classes without constructors cannot be subclassed
 	
-## Item 2 : Builder
-*   If we have a constructor with so many parameters, this will make it more difficult to write a proper constructor if some params are optional.
-*   One solution is to provide setters and getters (JavaBeans pattern), but this could not make us ensure the correctness of the implementation. Also, with JavaBeans, class immutability is precluded (setters and getters).
-*   Using builder is a good solution, we provide methods that add a parameter every time and return the builder, and finally a build method that checks the correctness of the process. At the end we will have a call like this that is prone to error:
-`new NutritionFacts.Builder(240,8).calories(100).sodium(35).carbohydrate(27).build()`;
+## Item 2 : Consider Builder when faced with many constructor parameters
+* Builder pattern is used when we deal with classes that have multiple parameters in which some of them are optional so instead of writing multiple constructors to meet every single combination of the parameters or at least desired combinations we use the builder pattern which consist of providing static factories that add parameters and return the Builder class and finally calls a build method that instanciate the object and returns it.
+	
 ## Item 3 : Enforce Singleton with a private constructor or an enum type
+* Singleton is simply a class that is instantiated exactly once
+* Export a final member (method or field) to to provide access to the singleton instance
+* Another way to implement a singleton is to declare a single-element enum
