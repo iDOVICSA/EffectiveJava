@@ -34,6 +34,8 @@
 	
 ## Item 3 : Enforce Singleton with a private constructor or an enum type
 * Singleton is simply a class that is instantiated exactly once
+	* Singleton
+	* Remeberb
 * Export a final member (method or field) to to provide access to the singleton instance
 * Another way to implement a singleton is to declare a single-element enum
 
